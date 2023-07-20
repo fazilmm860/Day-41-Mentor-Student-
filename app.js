@@ -5,6 +5,9 @@ const connectDB = require('./config/config')
 const app = express();
 dotenv.config()
 
+//Routes
+const student = require('./routes/student')
+
 //db config
 connectDB();
 
@@ -24,9 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-app.get('/api/mentor', (req, res) => {
-    res.send(`<h1>STUDENT MENTOR API</h1>`)
-});
+app.use('/api/mentor', student)
+
 
 app.listen(port, () => {
     console.log(`App is running on port:${port}`);
