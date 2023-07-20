@@ -1,6 +1,7 @@
 const express = require('express');
 const students = require('../models/student')
 
+
 const getstudent = async (req, res) => {
     try {
         const get = await students.find()
