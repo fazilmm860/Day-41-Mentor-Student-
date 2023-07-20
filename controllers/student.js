@@ -71,4 +71,4 @@ const deleteStudent = async (req, res) => {
 
 
 
-module.exports = { getstudent, addStudent, getSpecificStudent, updateStudent }
+module.exports = { getstudent, addStudent, getSpecificStudent, updateStudent, deleteStudent }
