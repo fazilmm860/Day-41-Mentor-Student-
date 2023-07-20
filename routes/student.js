@@ -9,4 +9,4 @@ router.get('/specstud/:_id', verify, getSpecificStudent);
 router.put('/editstudent/:name', verify, updateStudent)
 router.delete('/deletestudent/:roll', verify, deleteStudent)
 
-module.exports = router;
+module.exports = router; 
