@@ -7,6 +7,7 @@ dotenv.config()
 
 //Routes
 const student = require('./routes/student')
+const auth = require('./routes/auth')
 
 //db config
 connectDB();
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use('/api/mentor', student)
+app.use('/api/mentor', auth)
 
 
 app.listen(port, () => {
